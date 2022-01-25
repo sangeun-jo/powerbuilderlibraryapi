@@ -35,15 +35,12 @@ namespace PBLExtract
 
         private void buttonExtract_Click(object sender, EventArgs e)
         {
-            if (textBoxPBLFile.Text.Trim().Length > 0)
-            {
-                    ExtractPBL(new FileInfo(this.textBoxPBLFile.Text));
-            }
-            else if (textBoxFolderPath.Text.Trim().Length > 0)
-            {
-                DirectoryInfo di = new DirectoryInfo(textBoxFolderPath.Text);
-                ExtractPBL(di);
-            }
+            if (textBoxFolderPath.Text.Trim().Length > 0)
+                ExtractPBL(new FileInfo(this.textBoxPBLFile.Text), textBoxFolderPath.Text);
+            else if (textBoxPBLFile.Text.Trim().Length == 0)
+                MessageBox.Show("Please select pbl file");
+            else if (textBoxFolderPath.Text.Trim().Length == 0)
+                MessageBox.Show("Plase select save path");
         }
 
         private void Write(string txt)
@@ -66,25 +63,14 @@ namespace PBLExtract
             Application.Exit();
         }
 
-        public void ExtractPBL(DirectoryInfo parent)
-        {
-            foreach (FileInfo fi in parent.GetFiles("*.pbl"))
-            {
-                ExtractPBL(fi);
-            }
-            foreach (DirectoryInfo childFolder in parent.GetDirectories())
-            {
-                ExtractPBL(childFolder);
-            }
-        }
 
-        public void ExtractPBL(FileInfo fi)
+        public void ExtractPBL(FileInfo fi, string savePath)
         {
             try
             {
                 if (fi.Exists)
                 {
-                    string newDirName = fi.Directory.FullName + "\\" + fi.Name.Substring(0, (fi.Name.Length - fi.Extension.Length));
+                    string newDirName = savePath + "\\" + fi.Name.Substring(0, (fi.Name.Length - fi.Extension.Length));
 
                     DirectoryInfo saveDir;
                     if (Directory.Exists(newDirName))
@@ -110,22 +96,14 @@ namespace PBLExtract
                         {
                             Encoding enc = pblFile.IsUnicode ? Encoding.Unicode : Encoding.ASCII;
 
-                            fname = saveDir.FullName + "\\" + entry.ObjectName + ".txt";
+                            fname = saveDir.FullName + "\\" + entry.ObjectName.Split('.')[0] + ".cs";
 
                             File.WriteAllText(
                                 fname,
                                 enc.GetString(entry.RawData), enc);
-                        }
-                        else
-                        {
-                            fname = saveDir.FullName + "\\" + entry.ObjectName + ".bin";
 
-                            File.WriteAllBytes(
-                                fname,
-                                entry.RawData);
+                            WriteLine("Saving object to file: " + fname);
                         }
-
-                        WriteLine("Saving object to file: " + fname);
                     }
                 }
             }

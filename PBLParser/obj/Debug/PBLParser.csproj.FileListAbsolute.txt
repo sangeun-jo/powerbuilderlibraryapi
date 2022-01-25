@@ -1,0 +1,5 @@
+C:\dev\powerbuilderlibraryapi\PBLParser\bin\Debug\PowerBuilder.PBLParser.dll
+C:\dev\powerbuilderlibraryapi\PBLParser\bin\Debug\PowerBuilder.PBLParser.pdb
+C:\dev\powerbuilderlibraryapi\PBLParser\obj\Debug\PBLParser.csproj.CoreCompileInputs.cache
+C:\dev\powerbuilderlibraryapi\PBLParser\obj\Debug\PowerBuilder.PBLParser.dll
+C:\dev\powerbuilderlibraryapi\PBLParser\obj\Debug\PowerBuilder.PBLParser.pdb

@@ -1,0 +1,12 @@
+C:\dev\powerbuilderlibraryapi\PBLExtract\bin\Debug\PBLExtract.exe
+C:\dev\powerbuilderlibraryapi\PBLExtract\bin\Debug\PBLExtract.pdb
+C:\dev\powerbuilderlibraryapi\PBLExtract\bin\Debug\PowerBuilder.PBLParser.dll
+C:\dev\powerbuilderlibraryapi\PBLExtract\bin\Debug\PowerBuilder.PBLParser.pdb
+C:\dev\powerbuilderlibraryapi\PBLExtract\obj\Debug\PBLExtract.csproj.AssemblyReference.cache
+C:\dev\powerbuilderlibraryapi\PBLExtract\obj\Debug\PBLExtract.FormPBLExtract.resources
+C:\dev\powerbuilderlibraryapi\PBLExtract\obj\Debug\PBLExtract.Properties.Resources.resources
+C:\dev\powerbuilderlibraryapi\PBLExtract\obj\Debug\PBLExtract.csproj.GenerateResource.cache
+C:\dev\powerbuilderlibraryapi\PBLExtract\obj\Debug\PBLExtract.csproj.CoreCompileInputs.cache
+C:\dev\powerbuilderlibraryapi\PBLExtract\obj\Debug\PBLExtract.csproj.CopyComplete
+C:\dev\powerbuilderlibraryapi\PBLExtract\obj\Debug\PBLExtract.exe
+C:\dev\powerbuilderlibraryapi\PBLExtract\obj\Debug\PBLExtract.pdb
